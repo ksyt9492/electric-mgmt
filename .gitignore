@@ -1,0 +1,15 @@
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+# 빌드 결과물 (Render에서 직접 빌드)
+frontend/dist/
+
+# DB 파일 (서버에서 자동 생성)
+database/*.db
+database/*.db-shm
+database/*.db-wal
+
+# 환경 변수
+.env
+.env.*

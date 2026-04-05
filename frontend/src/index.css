@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-navy-900 text-slate-100 font-sans;
+  }
+
+  /* 입력 기본 스타일 */
+  input, select, textarea {
+    @apply bg-navy-800 border border-navy-600 text-slate-100 rounded-lg
+           focus:outline-none focus:ring-2 focus:ring-accent-400 focus:border-transparent
+           placeholder-slate-500;
+  }
+}
+
+@layer components {
+  /* 카드 */
+  .card {
+    @apply bg-navy-800 border border-navy-600 rounded-xl p-5 shadow-lg;
+  }
+
+  /* 기본 버튼 */
+  .btn-primary {
+    @apply bg-accent-500 hover:bg-accent-600 text-navy-900 font-bold
+           px-5 py-3 rounded-lg transition-colors duration-150
+           text-base leading-none;
+  }
+
+  .btn-secondary {
+    @apply bg-navy-700 hover:bg-navy-600 text-slate-200 font-medium
+           px-5 py-3 rounded-lg transition-colors duration-150
+           text-base leading-none border border-navy-600;
+  }
+
+  /* 상태 배지 */
+  .badge-정상   { @apply bg-emerald-900 text-emerald-300 border border-emerald-700; }
+  .badge-주의   { @apply bg-yellow-900  text-yellow-300  border border-yellow-700; }
+  .badge-불량   { @apply bg-red-900     text-red-300     border border-red-700; }
+  .badge-교체필요 { @apply bg-orange-900  text-orange-300  border border-orange-700; }
+}
