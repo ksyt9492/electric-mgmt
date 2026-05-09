@@ -15,8 +15,10 @@ if (!IS_PROD) {
 app.use(express.json());
 
 // API 라우트
-app.use('/api/equipments',   require('./routes/equipment'));
-app.use('/api/daily-checks', require('./routes/dailyCheck'));
+app.use('/api/equipments',          require('./routes/equipment'));
+app.use('/api/daily-checks',        require('./routes/dailyCheck'));
+app.use('/api/legal-inspections',   require('./routes/legalInspection'));
+app.use('/api/fault-history',       require('./routes/faultHistory'));
 
 // 헬스체크
 app.get('/api/health', (req, res) => {
